@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #big{
+            width: 400px; height: 300px;
+        }
+        .small{
+            width: 150px; height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>이미지 클릭</h1>
+        <div id="img1">
+            <img src="../images/전구 켜짐.jpg" id="big">
+        
+        <div id="small-pic">
+            <img src="../images/전구꺼짐.jpg" class="small">
+            <img src="../images/해변.jpg" class="small">
+            <img src="../images/돌맹이.jpg" class="small">
+        </div>
+        <button>클릭</button>
+        </div>
+    </div>
+    
+
+    <script>
+          let big = document.querySelector("#big")
+        let smallPics = document.querySelectorAll(".small");
+
+            for (let i=0 ; i<smallPics.length; i++){
+            smallPics[i].addEventListener("click",changePic);
+        }
+
+        function changePic(){
+            let newPic = this.src;
+            big.setAttribute("src", newPic)
+        }
+    </script>
+    
+</body>
+</html>

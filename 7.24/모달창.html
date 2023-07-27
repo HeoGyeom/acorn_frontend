@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #modal-box{
+            border:1px solid;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:  rgb(248, 194, 248);
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #modal-box.active{
+            display: flex;
+        }
+        #modal-contents{
+            width: 300px;
+            height: 200px;
+            border:  1px solid black;
+            background-color: black;
+          
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+            
+        }
+        #open{
+            position: absolute;
+            left: 50%;
+            top: 200px;
+        }
+        #close{
+           position: relative;
+           top:   100%;
+           left: 88%;
+        }
+        h3{
+            color: white;
+            text-align: center;
+        }
+        ul{
+            color: white;
+            list-style: none;
+            position: absolute;
+            top: 55%;
+        }
+        h2{
+            color: white;
+            position: absolute;
+            top: 47.5%;
+            left: 49%;
+        } 
+    </style>
+</head>
+<body>
+    <button id="open"> 프로필 보기 </button>
+
+    <div id="modal-box">
+        <div id="modal-contents" >
+            <span id="title"><h3>COMPANY</h3></span>
+            <div class="box1"> 
+                <ul>
+                    <li>tel:010-2591-2762</li>
+                    <li>mail:sldirmrp1@naver.com</li>
+                    <li></li> 
+                </ul>
+                <p><h2>HEO GYEOM</h2></p>
+            </div>
+            
+            <button id="close"> close</button>
+        </div>
+    </div>
+
+
+    <script>
+        const open = document.querySelector("#open");
+        const close = document.querySelector("#close");
+        const modalBox = document.querySelector("#modal-box");
+        
+        open.addEventListener("click", ()=>{
+            //클릭하면 클래스리스트에 .active스타일 추가 
+            modalBox.classList.add("active");
+            //토글로 바꿔서 입력해보기
+        })
+
+        close.addEventListener("click", () => {
+            modalBox.classList.remove("active");
+            //토글로 바꿔서 입력해보기
+        })
+    </script>
+</body>
+</html>

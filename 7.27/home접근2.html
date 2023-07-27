@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+           background-color: aqua;
+           display: flex;
+           flex-direction: column; 
+           align-items: center;
+        }
+        button{
+            
+            background-color: gray;
+        }
+        input{
+            width: 400px; height: 30px;
+        }
+        #result{
+            width: 150px;
+            height: 75px;
+            border: 1px solid black;
+            
+        }
+            
+           
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>최대 공약수 구하기</h1>
+        <p>두 수를 입력한 후 [계산하기]를 클릭하세요.</p>
+        <div id="box1"><label><input type="text" id="number1" name="number1"></label></div> <br>
+        <div id="box2"><label><input type="text" id="number2" name="number2"></label></div> <br>
+        <button id="click">계산하기</button>
+    
+        <div id="result"></div>
+    </div>
+    
+    
+    
+
+    <script>
+        //각 입력값을 변수로 가져온다
+       let n1 = document.querySelector("#number1")
+       let n2 = document.querySelector("#number2")
+       const result = document.querySelector("#result")
+       let btn = document.querySelector("#click")
+
+        // 버튼 클릭하면 result 변수에는 결과 값을
+       btn.addEventListener('click', () => {
+        result.innerText = abc(n1.value , n2.value)
+       })
+
+       //받아온 두 값 비교 <함수2> abc(변수1,변수2)
+       //나누어서 나머지 0이 되도록 두 값 모두 && AND연산자 모두 참이여야 실행
+       function abc(n1,n2){
+        let max = n1 > n2 ? n1 : n2 //최대값 max에 대입
+        let abcd = 0 
+        for(let i= 1; i<=max; i++){
+            if(n1 % i ===0 && n2 % i ===0)
+            abcd=i
+        } 
+        return abcd;
+       }       
+    
+        
+        //클릭하면 함수 실행
+        
+            
+            
+        
+
+        //클릭하면 함수 실행
+
+        //받아온 두 값 비교 
+        // 나누어서 나머지 0이 되도록 두 값 모두&&
+    </script>
+</body>
+</html>

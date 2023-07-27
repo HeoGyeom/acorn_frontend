@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 220px;
+        }
+    </style>
+</head>
+<body>
+    <p>이미지 마우스오버, 아웃</p>
+
+    <img src="../images/전구 켜짐.jpg" id="myImage">
+
+    <script>
+        let $myImage = document.getElementById("myImgage");
+        $myImage.addEventListener("mouseover", changePic1)
+        $myImage.addEventListener("mouseout", changePic2)
+
+        function changePic1(){
+            $myImgage.src ="../images/전구 켜짐.jpg"
+        }
+
+        function changePic2(){
+            $myImgage.src ="../images/전구꺼짐.jpg"
+        }
+    </script>
+
+    
+</body>
+</html>

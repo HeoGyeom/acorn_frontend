@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+
+        }
+        #btnPlus, #btnMious{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="btnPlus"> plus</a>
+    <a href="#" id="btnMious"> mious</a>
+    <div class="inText"></div>
+
+    <script>
+        const $btnPlus = document.getElementById("btnPlus");
+        const $btnMious = document.getElementById("btnMious");
+        let $inText = document.querySelector(".inText");
+        let num = 0;
+
+        $btnPlus.addEventListener("click",e =>{
+            e.preventDefault();
+            num++;
+            console.log(num);
+            $inText.innerText = num;
+        })
+
+        $btnMious.addEventListener("click" ,e =>{
+            e.preventDefault();
+            num--;
+            console.log(num);
+            $inText.innerText = num
+        })
+    </script>
+</body>
+
+</html>

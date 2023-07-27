@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            margin: 50px auto;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            animation: animas 5s alternate infinite ease;
+            /* 애니메이션 이름, 시간
+            한 줄로 속성값 입려이 권장사항
+            alternate : 갔다가왔다가(돌아오게)
+            infinite : 무한반복 */
+        }
+        @keyframes animas{
+            from{
+                transform: translate(0,0);
+            }
+            to{ 
+                transform: translate(400px, 1000px);
+            }
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">animation</div>
+    </div>
+    
+</body>
+</html>

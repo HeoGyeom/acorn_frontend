@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px; height: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <img src="../images/전구 켜짐.jpg" alt="">
+        <form>
+            <ul>
+                    <li>
+                        <label for="oPrice">원래 가격
+                        <input type="text" id="oPrice">원</label>
+                    </li>
+                    <li>
+                        <label for="rate">할인율
+                        <input type="text" id="rate">%</label>
+                    </li>
+                    <li>
+                        <button onclick="showPrice()">할인 가격 계산하기</button>
+                    </li>
+                    
+             </ul>
+        </form>
+    </div>
+
+
+    <div id="showResult"> <!--결과창 출력 할 곳 --> </div>
+    <script>
+        function showPrice(){
+            let originPrice = document.querySelector('#oPirce'). value; //원래 가격 
+            let rate =document.querySelector("#rate").value;//할인율
+            let savePrice = originPice * (rate/100); //할인 금액 :원래 가격*(할인율/100)
+            let resultPrice = $originPrice - $savePrice;
+            //최종가격
+
+            document.querySelector('showResult').innerHTML = '상품의 원래 가격은'
+            +$originPrice+ '원이고' , '할인율은' +$rate+ '이다'; 
+        }
+    </script>
+</body>
+</html>

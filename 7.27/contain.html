@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contains 함수</title>
+    <style>
+        #wrap{
+            width: 400px;
+            height: 400px;
+            border: solid 1px ;
+            padding:50px;
+            margin: 100px auto;
+        }
+        #wrap article{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: aqua;
+        }
+        #wrap.on article{
+            background-color: pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <article>클릭!</article>
+        <!-- 특정 클래스가 있는지 확인하는 contains()함수
+        클래스명 on이 있는지 확인 후 없다면 만들고 없으면 없애는 contains -->
+    </section>
+    
+    <script>
+        let $wrap = document.querySelector("#wrap");
+        let $box = document.querySelector("article");
+        $wrap.addEventListener("click",()=>{
+            let isOn = $wrap.classList.contains("on");
+            console.log("isOn")
+            if(isOn){
+                $wrap.classList.remove("on")
+            }else{
+                $wrap.classList.add("on")
+            }
+            //=위 아래가 같다
+            // (isOn) ? $wrap.calssList.remove("on") : $wrap.classList.add("on")
+
+            //별도.삼항 연산자  if문을 줄여준다.
+            
+            // $wrap.classList.toggle("on"); 2번
+            // $box.style.backgroundColor = "pink"; 1번:클릭 이벤트
+        })
+    </script>
+</body>
+</html>

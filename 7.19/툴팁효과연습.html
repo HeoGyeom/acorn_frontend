@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            padding: 50px;
+        }
+        .box1{
+            text-align: center;
+            cursor: pointer;
+            
+            padding: 0 50px;
+            
+        }
+        .box2{
+            width:  200px; height: 50px; 
+            visibility: collapse;
+            background-color: aqua;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+            position: absolute;
+            top: 250px;
+            left: 600px;
+            animation: ani 20s infinite alternate-reverse ease-in;
+        }
+        @keyframes ani{
+            from{
+                transform: (0,0);
+            }
+            to{
+                transform: (100px,100px);
+            }
+        }
+        .box1:hover .box2{
+            visibility: visible;
+        }
+       
+        
+
+    </style>
+</head>
+<body>
+    <h1>툽팁이 나타나는 위치 설정</h1>
+
+    <div class="box1">
+  
+        <p>여기에 마우스를 올려보세요!</p>
+        <div class="box2">
+            보여요
+        </div>
+    </div> 
+</body>
+</html>

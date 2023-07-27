@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // let fruit = "apple"
+        // console.log("과일 이름은?" + fruit);
+
+        // let fruit2 = "kiwi"
+        // console.log("과일 이름은?" + fruit2)
+
+        // let fruit3 = "orange"
+        // console.log('과일 이름은?' + fruit3)
+
+        let fruit = ["apple", "orange", " kiwi", "banana",]
+        console.log("과일 종류는?" + fruit) ;
+        console.log("과일중 세번째 과일은? " + fruit[2] +"입니다.");
+        console.log("과일중 세번째 과일은? " + fruit[1] +"입니다.");
+
+
+        //apple 이었던 0번 인덱스에 파인애플 추가
+        fruit[0] = ("pineapple")
+        console.log(fruit)
+
+        fruit[2] = ("tomato")
+        console.log(fruit)
+
+
+        //pop() : 마지막에 있는 아이템을 뻄
+        fruit.pop();
+        console.log(fruit);
+        //push() : 아이템을 배열 마지막에 추가함
+        fruit.push("chrry");
+        console.log(fruit);
+
+        //includes : 포함하고 있는지 묻는다 
+        console.log(fruit.includes("apple"));
+
+        //indexOf : 몇 번쨰에 있는지 묻는다
+        console.log(fruit.indexOf("kiwi"))
+
+        //slice() : 잘라낸다
+        //기존(오리지널)의 배열은 유지
+        console.log(fruit.slice(2)); //앞에서 2개 잘라냄
+        console.log(fruit.slice(1,3)); // 시작점, 끝점 (끝점 미포함, 끝점의 앞자리까지)
+        console.log(fruit);//기존(오리지널)의 배열은 유지
+
+        //slice와 splice의 차이 
+        let otherFruit = fruit.slice(1,3);
+        console.log("새로운 배열" , otherFruit);
+
+        //splice() : 시작점으로부터 몇개의 아이템 제거
+        // 기존(오리지널)의 배열이 잘림
+        fruit.splice(5);
+        console.log(fruit);
+
+        fruit[1] = "체리";
+        console.log(fruit);
+        console.log(fruit.indexOf("체리"));
+
+        //shift () 맨 앞, pop() 함수는 맨 뒤의 요소 추가 
+        fruit.shift();
+        console.log(fruit);
+
+        // unshift() 맨 앞,  push() 맨 뒤에 요소 추가
+        fruit.unshift("책")
+        console.log(fruit);
+
+
+
+
+
+
+
+        
+        let people =[ "철수", "짱구", "훈이", "유리",]
+        console.log("사람은"+ people)
+        console.log("범인은" + people[2], "입니다");
+
+        people[0] = ("맹구")
+        console.log(people)
+
+        people.splice(2);
+        console.log(people);
+
+        console.log(people.indexOf("철수"));
+
+        
+        
+
+        
+        </script>
+</body>
+</html>

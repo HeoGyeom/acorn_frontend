@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2</title> 
+    <style>
+        .parents1{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+
+        }
+        .parents2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+        }
+        .box{
+            padding: 15px;
+        }
+        .box:nth-child(odd){
+            background-color: palevioletred;
+        }
+        .box:nth-child(even){
+            background-color: aqua;
+        }
+         .parents1,
+        .parents2 >div{
+            border: 1px solid;
+        }
+    
+    </style>
+</head>
+<body>
+    <h3> auto-fit 일 떄 </h3>
+    <p>화면이 넓을 때에는 남는 공간 없이 꽉 채워서 컴럼 표시</p>
+    <div class="parents1">
+        <div class="box1"> box1 asfagdajdbgkadbgadbgladngjladgljabdglqbeuogj</div>
+        <div class="box2"> box2 ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
+        <div class="box3"> box3 saaaaaaaaaaaaaaaaaaaaaasf</div>
+        <div class="box4"> box4 asfasasfqfasga</div>
+        <div class="box5"> box5</div>
+        <div class="box6"> box6</div>
+        <div class="box7"> box7</div>
+        <div class="box8"> box8</div>
+        <div class="box9"> box9</div>
+        <div class="box10"> box10</div>
+    </div>
+
+
+
+    <h3> auto-fill 일 떄 </h3>
+    <p>칼럼의 최소 너비(200px) 만 표시하고 남는 공간 그대로 둔다.</p>
+    <div class="parents2">
+        <div class="box1"> box1 asfagdajdbgkadbgadbgladngjladgljabdglqbeuogj</div>
+        <div class="box2"> box2 ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
+        <div class="box3"> box3 saaaaaaaaaaaaaaaaaaaaaasf</div>
+        <div class="box4"> box4 asfasasfqfasga</div>
+        <div class="box5"> box5</div>
+        <div class="box6"> box6</div>
+        <div class="box7"> box7</div>
+        <div class="box8"> box8</div>
+        <div class="box9"> box9</div>
+        <div class="box10"> box10</div>
+    </div>
+</body>
+</html>

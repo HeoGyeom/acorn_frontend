@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+     <button class="btnplus">left</button>
+     <button class="btnmious">right</button>
+
+    <script>
+ 
+ const $btnplus = document.querySelector(".btnplus")
+ const $btnmious = document.querySelector(".btnmious")
+ let $box1 = document.querySelector("#box1")
+ let angle = 0
+
+        
+ $btnplus.addEventListener("click", () =>{
+            angle += 5
+            $box1.style.transform = `rotate(${angle}deg)`;
+            
+        })
+
+
+ $btnmious.addEventListener("click",() =>{
+            angle -=5
+            $box1.style.transform = `rotate(${angle}deg)`;
+        })
+
+    
+
+
+
+ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결재</title>
+</head>
+<body>
+    <div id="container">
+
+        <form name="order">
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name">
+                    </li>
+                    <li>
+                        <label for="tel">연락처</label>
+                        <input type="text" id="tel" name="tel">
+                    </li>
+                    <li>
+                        <label for="addr">주소 : </label>
+                        <input type="text" id="addr" name="addr">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <form name="ship">
+            <fieldset>
+                <legend>배송 정보</legend>
+                <ul>
+                    <li>
+                        <label for="shipInfo">주문 정보와 배송 정보가 같습니다.</label>
+                        <input type="checkbox" id="shipInfo" name="shipInfo">
+                    </li>
+                    <li>
+                        <label for="shipName">이름</label>
+                        <input type="text" id="shipName" name="shipName">
+                    </li>
+                    <li>
+                        <label for="shipTel">연락처 : </label>
+                        <input type="text" id="shipTel" name="shipTel">
+                    </li>
+                    <li>
+                        <label for="shipAddr">주소:</label>
+                        <input type="text" id="shipAddr" name="shipAddr">
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit">결재하기</button>
+        </form>
+    </div>
+    
+
+    <script>
+        let check = document.querySelector("#shipInfo") //체크박스의 id
+        
+        check.addEventListener("click",function(){
+            if(check.checked == true){ //check요소에 click 이벤트 발생시
+                document.querySelector("#shipName").value = document.querySelector("#name").value
+            } else{
+                document.querySelector("#shipName").value = ""; //필드 내용 지움
+            }
+            
+            if(check.checked == true){ //check요소에 click 이벤트 발생시
+                document.querySelector("#shipTel").value = document.querySelector("#tel").value
+            } else{
+                document.querySelector("#shipTel").value = ""; //필드 내용 지움
+            }
+
+            if(check.checked == true){ //check요소에 click 이벤트 발생시
+                document.querySelector("#shipAddr").value = document.querySelector("#addr").value
+            } else{
+                document.querySelector("#shipAddr").value = ""; //필드 내용 지움
+            }
+        })
+
+           
+    </script>
+</body>
+
+</html>

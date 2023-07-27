@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 600px;
+            margin: 0 auto;
+        }
+        ul{ /*순서없는 목록에 적용할 스타일*/
+            list-style: none; /* 불릿 없앰 */
+        }
+        li{
+            margin-bottom: 10px; /* 마진 아래쪽*/
+        }
+        .title{ width: 100px; /* class=title에 적용할 스타일*/
+            font-weight: bold; /* 굵은 글자 */
+            float: left; /* 왼쪽부터 배치 */
+            
+        }
+        fieldset{
+            margin: 15px 10px ; /* 상 하 마진 15px , 좌 우 마진 10px */
+        }
+        legend{
+            font-weight: bold; /* 굵은 글자 */ 
+            font-size: 20px; /* 글자 크기 */
+            color: brown;
+        }
+        .centered{ /* class=centered인 div에*/
+            text-align: center; /* 가운데 정렬*/ 
+        }
+</head>
+<body>
+        
+    <select>
+        <label for="class">학과</label>
+        <input type="text" id="class" size="5" multiple>
+        <!-- sise : 화면에 표시될 드롭다운 항목개수 지정-->
+        <!-- multiple : ctrl 누르면서 드롭다운 메뉴에 있는 여러 항목 선택-->
+        <!-- optgroup : label속성을 이용해 그룸의 제목을 붙인다-->
+        
+        <optgroup label="공과대학">
+            <option value="archi">건축공학과</option>
+            <option value="">machanic>기계공학과</option>
+            <option value="">indust>산업공학과</option>
+            <option value="">elec>전기공학과</option>
+            <option value="">conputer>컴퓨터공학과</option>
+            <option value="">chemical>화학공학과</option>
+       
+        </optgroup>
+        <optgroup label="인문대학">
+            <option value="history">역사학과</option>
+            <option value="lang">언어학과</option>
+            <option value="philo">철학과</option>
+        </optgroup>
+    </select>
+     
+</body>
+</html>

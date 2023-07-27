@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모서리 둥글게 만들기</title>
+    <style>
+        .round{
+            width: 300px;
+            height: 200px;
+            border: 1px solid brown;
+            padding: 20px ; /* 안쪽 여백 */
+            margin: 35px auto; /* 가장 바깥쪽에서 사용 가운데 정렬 */
+            border-top-left-radius:20px ;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 70px;
+            margin: 35px auto; 
+            
+        }
+        .round2{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            border-radius: 50px; /* 완전한 원으로 */
+            border-top-left-radius:20px ;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 70px;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 35px auto; 
+        }
+        .round3{
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border-radius: 20px;
+            border-top-left-radius:20px ;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 70px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="round">
+        내용
+    </div>
+    <div class="round2">
+        내~용
+    </div>
+    <div class="round3">
+        내~~용
+    </div>
+    
+</body>
+</html>

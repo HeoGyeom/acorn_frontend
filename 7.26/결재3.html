@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 100px;
+        }
+        p{
+            position: relative;
+            top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>총 주문 가격 확인</h1>
+        <fieldset class="box1">
+            <legend>기본 가격
+            <p>30,000원</p>
+            </legend>
+        </fieldset>
+        <fieldset>
+            <legend>추가 주문</legend>
+            <label><input type="checkbox" class="checkbox" value="1200">기장 추가(1200원)</label>
+            <label><input type="checkbox" class="checkbox" value="3000">배송 비용(3000원)</label>
+            <label><input type="checkbox" class="checkbox" value="800">산간지역 추가 비용(800원)</label>
+            <label><input type="checkbox" class="checkbox" value="4800">양말 (2개,4800원)</label>
+            <label><input type="checkbox" class="checkbox" value="2400">선물 포장(2400원)</label>
+        </fieldset>
+        <fieldset>
+            <legend>합계</legend>
+            <input type="text" id="sum" >
+        </fieldset>
+    </div>
+
+    <script>
+        let price = 30000;
+        const $checkbox = document.querySelectorAll(".checkbox")
+        const $total = document.querySelector("#sum")
+        $total.value = price + '원'
+
+        for(let i=0; i<$checkbox.length; i++){
+            $checkbox[i].onclick = function(){
+                if(this.checked){
+                    price += parseInt(this.value);
+                }else {
+                    price -= parseInt(this.value);
+                }
+            $total.value = price + '원'
+            } 
+        }
+
+        
+    </script>
+</body>
+</html>

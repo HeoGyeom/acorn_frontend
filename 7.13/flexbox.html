@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스</title>
+    <style>
+        section{
+            display: flex; /*부모요소에서 입력한다*/
+            /* 플렉스 이용 : 블록요소를 인라인 요소로 변경*/
+            justify-content: space-between; 
+            /*주축*/
+            /* justify-content: flex-end  전체가 오른쪽 창 끝으로;  */
+            /* justify-content: center; 가운데 정렬  */
+            /* justify-content: space-around; (양쪽끝 공백) 적당한 공백있으면서 정렬 */
+            /* justify-content: space-between  적당한 공백 있으면서 정렬  */
+            width: 100vh; /*전체화면(스크롤 포함) 비율*/
+            align-items: flex-center;
+
+            /*교차축*/
+            /*align-items: flex-end;*/
+            /*align-items: flex-start;*/
+            /*align-items: flex-center;*/
+            flex-direction: column; /*세로로 방향전환 (주축이 됨)*/
+            height: 1000px;
+            border: solid 3px brown;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+        }
+        .box1{
+            background-color: cadetblue;
+        }
+        .box2{
+            background-color: yellow;
+        }
+        .box3{
+            background-color:  royalblue;
+        }
+        .box4{
+            background-color: rebeccapurple ;
+        }
+        .box5{
+            background-color: palevioletred ;
+        }
+
+    </style>
+</head>
+<body>
+    
+</body>
+<section>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <div class="box5">박스5</div>
+</section>
+</html>

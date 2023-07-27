@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 신청서</title>
+</head>
+<h1>회원 정보 입력</h1>
+
+<body>
+    <div id="container"></div>
+    <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+            <ol>아이디
+                <label for="uid"></label>
+                <input type="text" id="uid">
+            </ol>
+            <ol>비밀번호
+                <label for="user-pw"></label>
+                <input type="password" id="user-pw" size="10">
+                <input type="button" value="로그인">
+
+            </ol>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>추가정보</legend>
+        <ul>메일주소
+            <label for="addr"></label>
+            <input type="text" id="addr">
+        </ul>
+        <label for="addr"> <input type="radio" id="addr"> 이메일 수신 </label>
+        <label for="addr"> <input type="radio" id="addr"> 메일 수신 동의 </label>
+        <label for="addr"> <input type="radio" id="addr"> 메일 수신 거부 </label> <br><br>
+        연락처
+        <label for="tel" 핸드폰></label>
+        <input type="text" placeholder="하이픈을 뺴고 입력해주세요"><br>
+
+        <label for="text">생년월일</label>
+        <input type="text" placeholder="YYYY.MM.DD"><br>
+        취미:
+        <input type="checkbox">
+        독서
+        <input type="checkbox">
+        음악감상
+        <input type="checkbox">
+        운동 <br><br><br>
+
+        <label for="path">가입 경로</label>
+        <select id="path">
+            <option value="">블로그</option>
+        </select> <br><br><br>
+
+        메모
+        <textarea name="" id="" cols="50" rows="20"> </textarea>
+
+
+
+    </fieldset>
+
+    <input type="submit">
+
+
+</body>
+
+</html>
