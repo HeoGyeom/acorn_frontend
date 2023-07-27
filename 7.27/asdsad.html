@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td class="n1">1</td>
+                <td class="n1">2</td>
+                <td class="n1">3</td>
+                <td class="n1">4</td>
+                <td class="n1">5</td>
+                <td id="result">?</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // 클릭 이벤트 리스너를 등록하여 숫자들의 합을 계산하는 함수를 실행합니다.
+        
+            let n1Elements = document.querySelectorAll(".n1");
+            let resultElement = document.getElementById("result");
+
+            // 클릭 이벤트 리스너를 추가
+            n1Elements.forEach((element) => {
+                element.addEventListener("click", () => {
+                    let sum = 0;
+                    n1Elements.forEach((el) => {
+                        sum += Number(el.textContent); // 각 숫자들의 값을 더합니다.
+                    });
+                    resultElement.textContent = sum; // 결과를 결과 요소에 표시합니다.
+                });
+            });
+        
+    </script>
+</body>
+</html>
